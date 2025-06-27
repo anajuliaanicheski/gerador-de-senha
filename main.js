@@ -1,9 +1,12 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');
 let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
-
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVXYWZ';
+const letrasMinusculas = 'abcdefghijklmnopqrstuvxywz';
+const numeros = '0123456789';
+const simbolos = '!@%*?';
 const botoes = document.querySelectorAll('.parametro-senha__botao');
-
+forcaSenha.classList.remove('fraca','media','forte');
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 
@@ -13,7 +16,7 @@ function diminuiTamanho() {
         tamanhoSenha--;
     }
     numeroSenha.textContent = tamanhoSenha;
-    geraSenha();
+    geraSenha();forcaSenha.classList.remove('fraca','media','forte');
 }
 function aumentaTamanho() {
     if (tamanhoSenha < 20) {
